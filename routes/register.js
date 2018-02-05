@@ -6,7 +6,7 @@ const register = async (deps, req, res) => {
   const hashnsalt = deps.hashnsalt;
   const verifyPassword = deps.verifyPassword;
   const findUser = deps.findUser;
-  const createEntry = deps.createEntry;
+  const createAccount = deps.createAccount;
   const username = req.query.username || false;
   const password = req.query.password || false;
   const crypto = require("crypto");
@@ -47,7 +47,7 @@ const register = async (deps, req, res) => {
         );
         if (hashVerification) {
           console.log(makeHash);
-          let databaseInsert = await createEntry(deps, {
+          let databaseInsert = await createAccount(deps, {
             username: username,
             password: hash,
             salt: salt

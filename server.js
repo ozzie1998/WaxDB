@@ -49,14 +49,14 @@ const decodeJwt = component("/jwt", "decodeJwt");
 const hashnsalt = component("/encryption", "hashnsalt");
 const verifyPassword = component("/encryption", "verifyPassword");
 deps.findUser = component("/async_dbOperations", "findUser");
-const createEntry = component("/async_dbOperations", "createEntry");
+const createAccount = component("/async_dbOperations", "createAccount");
 const client = component("connectRedis");
 const redisDel = component("redisDelete");
 const redisGet = component("redisGet");
 const redisSet = component("redisSet");
 const app = express();
 
-deps.jwtSecret = require("./random.txt") || false;
+deps.jwtSecret = require("config.json").jwtSecret || false;
 //app.use(morgan("dev"));
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
