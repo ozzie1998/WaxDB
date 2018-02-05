@@ -26,7 +26,7 @@ const performQuery = async data => {
   const query = await createEntry(data).catch(e => {
     return new Error(e);
   });
-  // query => { error: "posssible", data: insertQuery };
+  // query => { success: true, message: "createdAccount" };
 };
 ```
 
