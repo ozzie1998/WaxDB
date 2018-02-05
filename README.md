@@ -4,6 +4,8 @@ A NoSQL REST database using Redis written in NodeJS.
 
 **_Documentation is currently in the works!_**
 
+Will be seperating docs into a seperate file soon!
+
 Documentation:
 
 The server is made up of reusable functions called components.
