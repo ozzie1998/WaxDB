@@ -1,0 +1,8 @@
+[
+  {
+    "redisOperations": {
+      "location": "./components/tests/redisOperations.js",
+      "type": "async/await"
+    }
+  }
+]
